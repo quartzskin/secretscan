@@ -1,0 +1,9 @@
+{
+  "name": "secretscan",
+  "version": "0.1.0",
+  "description": "Scan a git repo's working tree and history for leaked secrets",
+  "bin": { "secretscan": "bin/secretscan.js" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "license": "MIT",
+  "private": true
+}
