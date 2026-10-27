@@ -1,0 +1,6 @@
+body { font-family: system-ui, sans-serif; margin: 1rem; }
+form > * { margin-right: 1rem; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #aaa; padding: 2px 6px; text-align: left; vertical-align: top; }
+td.mono, td.mono + td { font-family: ui-monospace, monospace; }
+tr.picked { background: #dbe8ff; }

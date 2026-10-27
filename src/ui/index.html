@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>secretscan</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1 id="repo">secretscan</h1>
+
+<p id="progress-line" hidden>
+  <progress id="bar" max="100"></progress>
+  <span id="progress-label"></span>
+</p>
+
+<form id="controls" hidden>
+  <label>Filter <input type="search" id="filter" size="30" placeholder="file, rule, commit"></label>
+  <label><input type="checkbox" id="live-only"> still present only</label>
+  <button type="button" id="ignore" disabled>Add selected to baseline</button>
+  <button type="button" id="rescan">Rescan</button>
+</form>
+
+<p id="status" role="status"></p>
+
+<table id="findings" hidden>
+  <thead>
+    <tr>
+      <th><input type="checkbox" id="all" aria-label="select all shown"></th>
+      <th>Commit</th>
+      <th>File:line</th>
+      <th>Rule</th>
+      <th>Confidence</th>
+      <th>Preview</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<p id="detail"></p>
+
+<script type="application/json" id="boot"><!--boot--></script>
+<script src="/app.js"></script>
+</body>
+</html>
